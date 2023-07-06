@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookie Consent Banner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="cookiePopup" lang="[#LANGUAGE#]" dir="[#TEXTDIRECTION#]" ng-non-bindable>
+      <h4 class="c-title">[#TITLE#]</h4>
+    <div class="container-message">
+      <p class="c-message">[#TEXT#]</p>
+    </div>
+    <div class="container-accept">
+      <button id="denegCookie" onclick="" class="c-button">[#DECLINE#]</button>
+      <button id="manageCookie" onclick="" class="c-button">
+          [#DETAILS#]
+      </button>
+      <button id="acceptCookie" onclick="Cookiebot.dialog.submitConsent()" class="c-button">[#ACCEPT#]</button>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+  </div>
+  </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

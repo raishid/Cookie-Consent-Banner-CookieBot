@@ -1,0 +1,71 @@
+#cookiePopup {
+  background-color: #ffffff;
+  position: fixed;
+  font-size: 14px;
+  width: 25%;
+  box-shadow: 0 0 2em rgba(5, 0, 31, 0.15);
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+  line-height: 1.8em;
+  padding: 2em 4em;
+  border-radius: 6px;
+  transition: all 0.5s ease-in;
+  bottom: 0px;
+}
+#cookiePopup img {
+  display: block;
+  width: 3.75em;
+  transform: translateZ(0);
+  position: relative;
+  margin: auto;
+}
+#cookiePopup button {
+  background-color: #0075E2;
+  border: none;
+  color: #ffffff;
+  font-size: 1.2em;
+  padding: 1em 1.5rem;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#cookiePopup button:hover {
+  background-color: #4CA9EF;
+}
+#cookiePopup button#denegCookie {
+  background-color: transparent;
+  border: 1px solid #797979;
+  color: #797979;
+}
+#cookiePopup button#denegCookie:hover {
+  background-color: #797979;
+  color: white;
+}
+#cookiePopup .container-accept{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+@media only screen and (max-width: 37.5em) {
+  #cookiePopup {
+    width: 100%;
+  }
+  .hide {
+    bottom: 2em;
+    right: 0;
+  }
+  .show {
+    right: 0;
+    bottom: 0;
+  }
+}
+#cookiePopup .c-title{
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 1rem;
+  margin: 0;
+}
+#cookiePopup .container-message{
+  margin-bottom: 1.3rem;
+}
