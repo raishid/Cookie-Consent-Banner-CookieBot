@@ -1,4 +1,4 @@
-#cookiePopup {
+#cookiebanner {
   background-color: #ffffff;
   position: fixed;
   font-size: 14px;
@@ -12,14 +12,14 @@
   transition: all 0.5s ease-in;
   bottom: 0px;
 }
-#cookiePopup img {
+#cookiebanner img {
   display: block;
   width: 3.75em;
   transform: translateZ(0);
   position: relative;
   margin: auto;
 }
-#cookiePopup button {
+#cookiebanner button {
   background-color: #0075E2;
   border: none;
   color: #ffffff;
@@ -30,42 +30,181 @@
   cursor: pointer;
   border-radius: 5px;
 }
-#cookiePopup button:hover {
+#cookiebanner button:hover {
   background-color: #4CA9EF;
 }
-#cookiePopup button#denegCookie {
+#cookiebanner button#denegCookie {
   background-color: transparent;
   border: 1px solid #797979;
   color: #797979;
 }
-#cookiePopup button#denegCookie:hover {
+#cookiebanner button#denegCookie:hover {
   background-color: #797979;
   color: white;
 }
-#cookiePopup .container-accept{
+#cookiebanner button#manageCookie{
+  background-color: transparent;
+  color: #0075E2;
+  border: 1px solid #0075E2;
+}
+
+#cookiebanner button#manageCookie:hover{
+  background-color: #0075E2;
+  color: white;
+}
+
+
+#cookiebanner .container-accept{
   display: flex;
   justify-content: space-between;
   gap: 1rem;
 }
-@media only screen and (max-width: 37.5em) {
-  #cookiePopup {
-    width: 100%;
-  }
-  .hide {
-    bottom: 2em;
-    right: 0;
-  }
-  .show {
-    right: 0;
-    bottom: 0;
-  }
-}
-#cookiePopup .c-title{
+#cookiebanner .c-title{
   font-size: 22px;
   font-weight: bold;
   padding-top: 1rem;
   margin: 0;
 }
-#cookiePopup .container-message{
+#cookiebanner .container-message{
   margin-bottom: 1.3rem;
+}
+
+
+#cookiebanner .nav-dropdown li{
+  list-style-type: none;
+  padding: 0.7rem 1rem;
+  color: black;
+  cursor: pointer;
+}
+
+#cookiebanner .nav-dropdown ul{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  border-bottom: 1px solid #D6D6D6;
+}
+
+#cookiebanner .nav-dropdown li.active{
+  border-bottom: 3px solid #0075E2;
+  color: #0075E2;
+  font-size: 15px;
+}
+
+#cookiebanner .divider-nav{
+  width: 100%;
+  height: 2px;
+  border-top: 2px solid #cccccc;
+}
+
+#cookiebanner .content-details{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#cookiebanner .container-detail{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#cookiebanner .detail{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cookiebanner .subtitle-details{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#cookiebanner .count-detail{
+  background-color: #cccccc;
+  padding: 5px 10px;
+  border-radius: 75%;
+  font-weight: 600;
+}
+
+#cookiebanner .container-about-cookie{
+  max-height: 200px;
+  overflow-y: scroll;
+  padding: 0 2rem;
+}
+#cookiebanner .container-about-cookie::-webkit-scrollbar{
+  width: 0.25em;
+}
+#cookiebanner .container-about-cookie::-webkit-scrollbar-thumb{
+  background: #141414;
+  border-radius: 0.313em;
+}
+#cookiebanner .container-about-cookie::-webkit-scrollbar-track{
+  background: #f2f2f2;
+  border-radius: 0.313em;
+}
+
+/* The switch - the box around the slider */
+#cookiebanner .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+#cookiebanner .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+#cookiebanner .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#cookiebanner .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#cookiebanner input:checked + .slider {
+  background-color: black;
+}
+
+#cookiebanner input:focus + .slider {
+  box-shadow: 0 0 1px black;
+}
+
+#cookiebanner input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+#cookiebanner .slider.round {
+  border-radius: 34px;
+}
+
+#cookiebanner .slider.round:before {
+  border-radius: 50%;
+}
+
+#cookiebanner.active-text{
+  padding: 2rem 1rem;
 }
