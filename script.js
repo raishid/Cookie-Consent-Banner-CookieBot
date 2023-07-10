@@ -1,4 +1,4 @@
-const secctionDetails = `
+var secctionDetails = `
     <div class="container-detail">
         <div class="detail">
             <div>
@@ -7,7 +7,7 @@ const secctionDetails = `
             </div>
             <div>
                 <label class="switch">
-                    <input type="checkbox" disabled checked>
+                    <input type="checkbox" id="CybotCookiebotDialogBodyLevelButtonNecessary" disabled checked>
                     <span class="slider round"></span>
                 </label>
             </div>
@@ -19,7 +19,7 @@ const secctionDetails = `
             </div>
             <div>
                 <label class="switch">
-                    <input type="checkbox" checked>
+                    <input type="checkbox" id="CybotCookiebotDialogBodyLevelButtonPreferences" checked>
                     <span class="slider round"></span>
                 </label>
             </div>
@@ -31,7 +31,19 @@ const secctionDetails = `
             </div>
             <div>
                 <label class="switch">
-                    <input type="checkbox" checked>
+                    <input type="checkbox" id="CybotCookiebotDialogBodyLevelButtonStatistics" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <div class="detail">
+            <div>
+                <span class="subtitle-details">${Cookiebot.dialog.cookieHeaderTypeAdvertising.replace('({0})', '')} </span>
+                <span class="count-detail">${Cookiebot.dialog.cookieTableAdvertising.length}</span>
+            </div>
+            <div>
+                <label class="switch">
+                    <input type="checkbox" id="CybotCookiebotDialogBodyLevelButtonMarketing" checked>
                     <span class="slider round"></span>
                 </label>
             </div>
@@ -39,15 +51,15 @@ const secctionDetails = `
     </div>
 `;
 
-const aboutCookies = `<div class="container-about-cookie">
+var aboutCookies = `<div class="container-about-cookie">
     <p>
         ${Cookiebot.dialog.cookieIntroText}
     </p>
-</div>`
+</div>`;
 
-const templateDetails = `<nav class="nav-dropdown">
+var templateDetails = `<nav class="nav-dropdown">
         <ul>
-            <li class="active" onclick="showDetails(this)">${Cookiebot.dialog.details}</li>
+            <li class="active" onclick="showDetails(this)">${Cookiebot.dialog.details || 'Details'}</li>
             <li onclick="showAboutCookies(this)">${Cookiebot.dialog.aboutCookiesText}</li>
         </ul>
     </nav>
@@ -70,7 +82,8 @@ function showAboutCookies(e) {
 
 function addDropdown() {
     const bt = document.querySelector('#manageCookie');
-    bt.innerHTML = Cookiebot.dialog.loiAllowSelectionText
+    bt.innerHTML = Cookiebot.dialog.loiAllowSelectionText;
+    bt.id = 'CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection';
     bt.attributes.onclick.value = 'Cookiebot.dialog.submitConsent()';
     bt.style.fontSize = '14px';
     document.querySelector("#cookiebanner .container-first").innerHTML = templateDetails;
