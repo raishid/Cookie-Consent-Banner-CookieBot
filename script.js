@@ -19,7 +19,7 @@ var secctionDetails = `
             </div>
             <div>
                 <label class="switch">
-                    <input type="checkbox" id="CybotCookiebotDialogBodyLevelButtonPreferences" checked>
+                    <input type="checkbox" id="CybotCookiebotDialogBodyLevelButtonPreferences" ${ Cookiebot.dialog.cookieconsent.consent.preferences && 'checked' }>
                     <span class="slider round"></span>
                 </label>
             </div>
@@ -31,7 +31,7 @@ var secctionDetails = `
             </div>
             <div>
                 <label class="switch">
-                    <input type="checkbox" id="CybotCookiebotDialogBodyLevelButtonStatistics" checked>
+                    <input type="checkbox" id="CybotCookiebotDialogBodyLevelButtonStatistics" ${ Cookiebot.dialog.cookieconsent.consent.statistics && 'checked' }>
                     <span class="slider round"></span>
                 </label>
             </div>
@@ -43,7 +43,7 @@ var secctionDetails = `
             </div>
             <div>
                 <label class="switch">
-                    <input type="checkbox" id="CybotCookiebotDialogBodyLevelButtonMarketing" checked>
+                    <input type="checkbox" id="CybotCookiebotDialogBodyLevelButtonMarketing" ${ Cookiebot.dialog.cookieconsent.consent.marketing && 'checked' }>
                     <span class="slider round"></span>
                 </label>
             </div>

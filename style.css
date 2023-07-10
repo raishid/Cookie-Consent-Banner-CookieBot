@@ -213,7 +213,16 @@
 
 @media (max-width: 768px) {
   #cookiebanner {
-    width: 100%;
-    height: 50%;
+    max-height: 100vh;
+    max-width: calc(100vw - 20px);
+    width: 90%;
+    min-width: auto;
+    left: 50%;
+    padding: 2rem 2rem;
+    transform: translateX(-50%);
+  }
+
+  #cookiebanner .container-accept button{
+    font-size: 12px;
   }
 }
